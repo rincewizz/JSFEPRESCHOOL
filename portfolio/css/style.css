@@ -25,6 +25,9 @@ a{
 .flex--header{
 	padding: 20px 0;
 }
+.flex--wrap{
+	 flex-wrap: wrap;
+}
 .col{
 	flex: 0 0 auto;
 }
@@ -89,8 +92,14 @@ a{
 	line-height: 2;
 	text-align: center;
 	background: #BDAE82;
-	padding: 7px 0;
+	border: 2px solid #BDAE82;
+	padding: 6px 0;
 	min-width: 220px;
+	box-sizing: border-box;
+}
+.button--border{
+	color: #BDAE82;
+	background: transparent;
 }
 
 .section{
@@ -153,4 +162,24 @@ a{
 	line-height: 2;
 	padding: 0 20px;
 	margin-bottom: 10px;
+}
+
+
+.gallery__btns{
+	text-align: center;
+	margin-top: 60px;
+}
+.gellery__photos{
+	gap: 25px;
+	margin-top: 60px;
+}
+.gallery__link{
+	display: block;
+	flex: 0 0 auto;
+  max-width: 33.333%;
+}
+.gallery__img{
+	width: 100%;
+	height: auto;
+	display: block;
 }
