@@ -96,3 +96,61 @@ a{
 .section{
 	margin-top: 100px;
 }
+.section__title{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 2;
+	text-align: center;
+	color: #BDAE82;
+	max-width: 700px;
+	margin: 0 auto;
+
+}
+.section__title:after, .section__title:before{
+	display: block;
+	height: 2px;
+	width: 100%;
+	background: #BDAE82;
+	content: "";
+}
+.section__title:before{
+	margin-right: 20px;
+}
+.section__title:after{
+	margin-left: 20px;
+}
+
+.skills__list{
+	margin-top: 62px;
+	gap: 40px;
+}
+.skill{
+	text-align: center;
+	flex: 1 0 0;;
+}
+.skill__ico{
+	width: auto;
+	height: 50px;
+	margin-bottom: 50px;
+	vertical-align: top;
+}
+.skill__title{
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0;
+	line-height: 2;
+	letter-spacing: 0.5px;
+}
+.skill__text{
+	line-height: 2;
+	padding: 0 20px;
+	margin-bottom: 10px;
+}
