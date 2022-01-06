@@ -2,145 +2,210 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title></title>
   </head>
   <body>
     <header class="header">
-      <div class="logo">
-        <img src="#" alt="portfolio logo" class="logo__img">
+      <div class="container">
+        <div class="flex flex--header">
+          <div class="logo col">
+            <img src="./img/logo.svg" alt="portfolio logo" class="logo__img">
+          </div>
+          <nav class="menu col">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Skills</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Portfolio</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Video</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Price</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Contacts</a>
+              </li>
+              
+            </ul>
+          </nav>
+          <div class="lang col">
+            <div class="lang__item"><a href="#" class="lang__link">en</a></div>
+            <div class="lang__item lang__item--slash">/</div>
+            <div class="lang__item"><a href="#" class="lang__link">ru</a></div>
+          </div>
+        </div>
+
+
+        <section class="section hero">
+          <div class="container">
+            <div class="hero__wrap">
+              <h1 class="hero__title">Alexa Rise</h1>
+              <p class="hero__text">
+                Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise
+              </p>
+              <a class="hero__link button">Hire me</a>
+            </div>
+          </div>
+        </section>
       </div>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#" class="menu__link"></a>
-            <a href="#" class="menu__link"></a>
-            <a href="#" class="menu__link"></a>
-            <a href="#" class="menu__link"></a>
-            <a href="#" class="menu__link"></a>
-          </li>
-        </ul>
-      </nav>
-      <div class="lang"></div>
-      
     </header>
     <main>
 
-      <section class="section hero">
-        <div class="hero__wrap">
-          <h1 class="hero__title">Alexa Rise</h1>
-          <p class="hero__text">
-            Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise
-          </p>
-          <button class="hero__button">Hire me</button>
-        </div>
-      </section>
-
       <section class="section skills">
-        <h2 class="section__title skills__title">Skills</h2>
-        <div class="skills__list">
-          <div class="skills__item skill">
-            <img src="" alt="" class="skill__ico">
-            <h3 class="skill__title"></h3>
-            <p class="skill__text"></p>
-          </div>
-          <div class="skills__item skill">
-            <img src="" alt="" class="skill__ico">
-            <h3 class="skill__title"></h3>
-            <p class="skill__text"></p>
-          </div>
-          <div class="skills__item skill">
-            <img src="" alt="" class="skill__ico">
-            <h3 class="skill__title"></h3>
-            <p class="skill__text"></p>
-          </div>
-          <div class="skills__item skill">
-            <img src="" alt="" class="skill__ico">
-            <h3 class="skill__title"></h3>
-            <p class="skill__text"></p>
+        <div class="container">
+          <h2 class="section__title skills__title">Skills</h2>
+          <div class="skills__list">
+            <div class="skills__item skill">
+              <img src="" alt="" class="skill__ico">
+              <h3 class="skill__title">Digital photography</h3>
+              <p class="skill__text">
+                High-quality photos in the studio and on the nature
+              </p>
+            </div>
+            <div class="skills__item skill">
+              <img src="" alt="" class="skill__ico">
+              <h3 class="skill__title">Video shooting</h3>
+              <p class="skill__text">
+                Capture your moments so that they always stay with you
+              </p>
+            </div>
+            <div class="skills__item skill">
+              <img src="" alt="" class="skill__ico">
+              <h3 class="skill__title">Retouch</h3>
+              <p class="skill__text">
+                I strive to make photography surpass reality
+              </p>
+            </div>
+            <div class="skills__item skill">
+              <img src="" alt="" class="skill__ico">
+              <h3 class="skill__title">Audio</h3>
+              <p class="skill__text">
+                Professional sounds recording for video, advertising, portfolio
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section portfolio">
-        <h2 class="section__title portfolio__title">Portfolio</h2>
-        <div class="portfolio__gallery gallery">
-          <div class="gallery__btns">
-            <button class="portfolio__btn"></button>
-            <button class="portfolio__btn"></button>
-            <button class="portfolio__btn"></button>
-            <button class="portfolio__btn"></button>
-          </div>
-          <div class="gellery__photos">
-            <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
-            <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
-            <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
-            <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
-            <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
-            <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
+        <div class="container">
+          <h2 class="section__title portfolio__title">Portfolio</h2>
+          <div class="portfolio__gallery gallery">
+            <div class="gallery__btns">
+              <button class="portfolio__btn">Winter</button>
+              <button class="portfolio__btn">Spring</button>
+              <button class="portfolio__btn">Summer</button>
+              <button class="portfolio__btn">Autumn</button>
+            </div>
+            <div class="gellery__photos">
+              <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
+              <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
+              <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
+              <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
+              <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
+              <a href="" class="gallery__link"><img src="" alt="" class="gallert__img"></a>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section video">
-        <h2 class="section__title video__title">Video</h2>
-        <div class="video__player player"><img src="" alt="" class="video__img"></div>
+        <div class="container">
+          <h2 class="section__title video__title">Video</h2>
+          <div class="video__player player"><img src="" alt="" class="video__img"></div>
+        </div>
       </section>
 
       <section class="section price">
-        <h2 class="section__title price__title">Price</h2>
-        <div class="price__items">
-          <div class="price__item plan">
-            <h3 class="plan__title"></h3>
-            <div class="plan__cost"></div>
-            <ul class="plan__services">
-              <li class="plan__service"></li>
-            </ul>
-            <button class="plan__button"></button>
-          </div>
-          <div class="price__item plan">
-            <h3 class="plan__title"></h3>
-            <div class="plan__cost"></div>
-            <ul class="plan__services">
-              <li class="plan__service"></li>
-            </ul>
-            <button class="plan__button"></button>
-          </div>
-          <div class="price__item plan">
-            <h3 class="plan__title"></h3>
-            <div class="plan__cost"></div>
-            <ul class="plan__services">
-              <li class="plan__service"></li>
-            </ul>
-            <button class="plan__button"></button>
+        <div class="container">
+          <h2 class="section__title price__title">Price</h2>
+          <div class="price__items">
+            <div class="price__item plan">
+              <h3 class="plan__title">Standard</h3>
+              <div class="plan__cost">500 $</div>
+              <ul class="plan__services">
+                <li class="plan__service">One location</li>
+                <li class="plan__service">120 photos in color</li>
+                <li class="plan__service">12 photos in retouch</li>
+                <li class="plan__service">Readiness 2-3 weeks</li>
+                <li class="plan__service">Make up, visage</li>
+              </ul>
+              <button class="plan__button">Order shooting</button>
+            </div>
+            <div class="price__item plan">
+              <h3 class="plan__title">Premium</h3>
+              <div class="plan__cost">700 $</div>
+              <ul class="plan__services">
+                <li class="plan__service">One or two locations</li>
+                <li class="plan__service">200 photos in color</li>
+                <li class="plan__service">20 photos in retouch</li>
+                <li class="plan__service">Readiness 1-2 weeks</li>
+                <li class="plan__service">Make up, visage</li>
+              </ul>
+              <button class="plan__button">Order shooting</button>
+            </div>
+            <div class="price__item plan">
+              <h3 class="plan__title">Gold</h3>
+              <div class="plan__cost">1000 $</div>
+              <ul class="plan__services">
+                <li class="plan__service">Three locations or more</li>
+                <li class="plan__service">300 photos in color</li>
+                <li class="plan__service">50 photos in retouch</li>
+                <li class="plan__service">Readiness 1 week</li>
+                <li class="plan__service">Make up, visage, hairstyle</li>
+              </ul>
+              <button class="plan__button">Order shooting</button>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section contacts">
-        <h2 class="contacts__title">Contact me</h2>
-        <div class="contacts__wrap">
-          <form action="" class="contacts__form form">
-            <input type="email" class="form__field form__email">
-            <input type="tel" class="form__field form__phone">
-            <textarea name="" id="" class="form__field form__message" cols="30" rows="10"></textarea>
-            <button type="submit" class="form__button">Send message</button>
-          </form>
+        <div class="container">
+          <h2 class="contacts__title">Contact me</h2>
+          <div class="contacts__wrap">
+            <form action="" class="contacts__form form">
+              <input type="email" class="form__field form__email" placeholder="E-mail">
+              <input type="tel" class="form__field form__phone" placeholder="Phone">
+              <textarea name="" id="" class="form__field form__message" cols="30" rows="10" placeholder="Message"></textarea>
+              <button type="submit" class="form__button">Send message</button>
+            </form>
+          </div>
         </div>
       </section>
 
     </main>
 
     <footer class="footer">
-      <div class="footer__content">
-        <div class="year"></div>
-        <div class="github"><a href="" class="github__link"></a></div>
-        <div class="rss"><a href="" class="rss__link"></a></div>
-        <div class="social">
-          <a href="" class="social__link"><img src="" alt="" class="social__img"></a>
-          <a href="" class="social__link"><img src="" alt="" class="social__img"></a>
-          <a href="" class="social__link"><img src="" alt="" class="social__img"></a>
-          <a href="" class="social__link"><img src="" alt="" class="social__img"></a>
+      <div class="container">
+        <div class="footer__content">
+          <div class="year">© 2022</div>
+          <div class="github"><a href="" class="github__link">github</a></div>
+          <div class="rss"><a href="" class="rss__link">Rolling Scopes School</a></div>
+          <div class="social">
+            <ul class="social__items">
+              <li class="social__item">
+                <a href="" class="social__link"><img src="" alt="instagram" class="social__img"></a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link"><img src="" alt="facebooke" class="social__img"></a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link"><img src="" alt="twitter" class="social__img"></a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link"><img src="" alt="pinterest" class="social__img"></a>
+              </li>
+            </ul>
+            
+          </div>
         </div>
       </div>
     </footer>

@@ -1,1 +1,98 @@
- 
+body{
+	margin: 0;
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Inter', sans-serif;
+} 
+a{
+	color: #fff;
+}
+
+.container{
+	width: 1440px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.flex{
+	display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex--header{
+	padding: 20px 0;
+}
+.col{
+	flex: 0 0 auto;
+}
+
+.header{
+	background: url(../img/hero-bg.jpg) top center no-repeat;
+	height: 910px;
+}
+
+.logo__img{
+  display: block;
+	width: 50px;
+	height: 50px;
+}
+.menu{
+	font-size: 20px;
+	padding: 0 15px;
+	margin-left: auto;
+}
+.menu__list{
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.menu__item{
+	padding: 0 15px;
+}
+.menu__link{
+	text-decoration: none;
+}
+
+.lang{
+	font-size: 20px;
+}
+.lang__item{
+	display: inline-block;
+}
+.lang__item--slash{
+	margin: 0 5px;
+}
+
+.hero__wrap{
+	max-width: 470px;
+	margin: 160px 60px;
+}
+.hero__title{
+	font-family: 'Merriweather', serif;
+	font-size: 60px;
+	line-height: 120px;
+	margin: 0;
+}
+.hero__text{
+	font-size: 20px;
+	line-height: 2;
+	margin: 10px 0 25px;
+}
+
+.button{
+	display: inline-block;
+	font-size: 20px;
+	line-height: 2;
+	text-align: center;
+	background: #BDAE82;
+	padding: 7px 0;
+	min-width: 220px;
+}
+
+.section{
+	margin-top: 100px;
+}
