@@ -72,7 +72,7 @@ a{
 
 .hero__wrap{
 	max-width: 470px;
-	margin: 160px 60px;
+	margin: 160px 40px;
 }
 .hero__title{
 	font-family: 'Merriweather', serif;
@@ -93,7 +93,7 @@ a{
 	text-align: center;
 	background: #BDAE82;
 	border: 2px solid #BDAE82;
-	padding: 6px 0;
+	padding: 5.5px 0;
 	min-width: 220px;
 	box-sizing: border-box;
 }
@@ -175,7 +175,7 @@ a{
 }
 .gallery__link{
 	display: block;
-	flex: 0 0 auto;
+	flex: 1 0 auto;
   max-width: 33.333%;
 }
 .gallery__img{
@@ -215,4 +215,47 @@ a{
 	width: 130px;
 	height: 130px;
 	background: none;
+}
+
+.price__items{
+	gap: 25px;
+	margin-top: 60px;
+}
+.plan{
+	border: 3px solid #BDAE82;
+	box-sizing: border-box;
+	padding: 40px;
+  flex: 1 0 auto;
+  max-width: 33.333%;
+}
+.plan__title{
+	font-family: Merriweather;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 2;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 0 0 20px;
+}
+.plan__cost{
+	font-family: Merriweather;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 2;
+	text-align: center;
+	color: #BDAE82;
+	margin: 0 0 20px;
+}
+.plan__services{
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	font-size: 18px;
+	line-height: 2;
+	color: #FFFFFF;
+	margin: 0 0 40px;
+}
+.plan__button{
+	display: block;
+	margin: 0 auto;
 }
