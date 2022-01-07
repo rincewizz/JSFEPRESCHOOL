@@ -259,3 +259,51 @@ a{
 	display: block;
 	margin: 0 auto;
 }
+
+.contacts{
+	background: url(../img/contacts.jpg) center no-repeat;
+}
+.contacts__wrap{
+	max-width: 450px;
+	margin-left: auto;
+	padding-top: 60px;
+	padding-bottom: 195px;
+}
+.contacts__title{
+	font-family: Merriweather;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 2;
+	color: #BDAE82;
+	margin: 0 0 40px;
+}
+.form{
+
+}
+.form__field{
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	background: rgba(0, 0, 0, 0.5);
+	border: 2px solid #BDAE82;
+	box-sizing: border-box;
+	color: #BDAE82;
+	font-size: 20px;
+	line-height: 2;
+	height: 50px;
+	padding-left: 20px;
+}
+.form__field--textarea{
+	margin-bottom: 30px;
+	height: 100px;
+}
+.form__field::placeholder{
+	color: #BDAE82;
+	font-size: 20px;
+	line-height: 2;
+	font-family: Inter;
+}
+.form__button{
+
+}
+
