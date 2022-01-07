@@ -307,3 +307,40 @@ a{
 
 }
 
+.footer{
+  font-size: 20px;
+  padding: 55px 0;
+}
+.footer__content{
+
+}
+.github{
+  line-height: 2;
+  width: 25%;
+}
+.year{
+  margin: 0 20px;
+}
+.rss{
+  line-height: 2;
+}
+.github__link, .rss__link{
+	text-decoration: none;
+}
+.social{
+  width: 25%;
+  text-align: right;
+}
+.social__items{
+	list-style: none;
+	margin: 0;
+}
+.social__item{
+	display: inline-block;
+	margin-left: 15px;
+}
+.social__img{
+	vertical-align: top;
+	width: auto;
+	height: 32px;
+}
