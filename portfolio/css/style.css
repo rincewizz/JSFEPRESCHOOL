@@ -183,3 +183,36 @@ a{
 	height: auto;
 	display: block;
 }
+
+.video__player{
+	margin-top: 60px;
+}
+.player{
+	background: url(../img/video-player.jpg) center no-repeat;
+	width: 100%;
+  position: relative;
+  padding-bottom: 48.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.play-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    display: block;
+    width: 130px;
+    height: 130px;
+}
+.play-btn__img{
+	width: 130px;
+	height: 130px;
+	background: none;
+}
