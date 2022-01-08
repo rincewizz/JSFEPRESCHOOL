@@ -1,3 +1,6 @@
+html{
+	scroll-behavior: smooth;
+}
 body{
 	margin: 0;
 	background: #000;
@@ -7,6 +10,10 @@ body{
 } 
 a{
 	color: #fff;
+	transition: color 0.5s;
+}
+a:hover{
+	color: #BDAE82;
 }
 
 .container{
@@ -41,7 +48,13 @@ a{
   display: block;
 	width: 50px;
 	height: 50px;
+	fill: #fff;
+	transition: fill 0.5s;
 }
+.logo__img:hover{
+	fill: #CCBA8D;
+}
+
 .menu{
 	font-size: 20px;
 	padding: 0 15px;
@@ -69,6 +82,9 @@ a{
 .lang__item--slash{
 	margin: 0 5px;
 }
+.lang__link{
+	text-decoration: none;
+}
 
 .hero__wrap{
 	max-width: 470px;
@@ -87,7 +103,9 @@ a{
 }
 
 .button{
+	color: #000;
 	display: inline-block;
+	font-family: inherit;
 	font-size: 20px;
 	line-height: 2;
 	text-align: center;
@@ -96,6 +114,11 @@ a{
 	padding: 5.5px 0;
 	min-width: 220px;
 	box-sizing: border-box;
+	cursor: pointer;
+	transition: color 0.5s;
+}
+.button:hover{
+	color: #fff;
 }
 .button--border{
 	color: #BDAE82;
@@ -197,24 +220,28 @@ a{
   overflow: hidden;
 }
 .play-btn{
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 0;
-    display: block;
-    width: 130px;
-    height: 130px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  display: block;
+  width: 130px;
+  height: 130px;
 }
 .play-btn__img{
 	width: 130px;
 	height: 130px;
-	background: none;
+	fill: #fff;
+	transition: fill 0.5s;
+}
+.play-btn__img:hover{
+	fill: #CCBA8D;
 }
 
 .price__items{
@@ -288,6 +315,7 @@ a{
 	border: 2px solid #BDAE82;
 	box-sizing: border-box;
 	color: #BDAE82;
+	font-family: inherit;
 	font-size: 20px;
 	line-height: 2;
 	height: 50px;
@@ -296,6 +324,7 @@ a{
 .form__field--textarea{
 	margin-bottom: 30px;
 	height: 100px;
+	resize:  none;
 }
 .form__field::placeholder{
 	color: #BDAE82;
@@ -339,8 +368,15 @@ a{
 	display: inline-block;
 	margin-left: 15px;
 }
-.social__img{
+.social__img, .social__svg{
 	vertical-align: top;
 	width: auto;
 	height: 32px;
+}
+.social__svg{
+	fill: #fff;
+	transition: fill 0.5s;
+}
+.social__svg:hover{
+	fill: #CCBA8D;
 }
