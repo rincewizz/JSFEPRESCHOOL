@@ -44,6 +44,7 @@ a:hover{
 .header{
 	background: url(../img/hero-bg.jpg) top center no-repeat;
 	height: 910px;
+	max-height: calc(100vw * 0.9);
 }
 
 .logo__img{
@@ -164,12 +165,14 @@ a:hover{
 }
 
 .skills__list{
+	flex-wrap: wrap;
 	margin-top: 62px;
 	gap: 40px;
 }
 .skill{
 	text-align: center;
-	flex: 1 0 0;;
+	flex: 1 0 auto;
+	width: calc((100% - 120px) / 4);
 }
 .skill__ico{
 	width: auto;
@@ -193,7 +196,7 @@ a:hover{
 
 .gallery__btns{
 	text-align: center;
-	margin-top: 60px;
+	margin-top: 60px;	
 }
 .gellery__photos{
 	gap: 25px;
@@ -203,6 +206,7 @@ a:hover{
 	display: block;
 	flex: 1 0 auto;
   max-width: 33.333%;
+  width: calc((100% - 50px) / 3);
 }
 .gallery__img{
 	width: 100%;
@@ -348,7 +352,7 @@ a:hover{
 }
 .github{
   line-height: 2;
-  width: 25%;
+  width: 35%;
 }
 .year{
   margin: 0 20px;
@@ -360,7 +364,7 @@ a:hover{
 	text-decoration: none;
 }
 .social{
-  width: 25%;
+  width: 35%;
   text-align: right;
 }
 .social__items{
@@ -384,8 +388,51 @@ a:hover{
 	fill: #CCBA8D;
 }
 
+@media (max-width: 1440px) {
+	.header{
+		background-position: bottom left;
+    background-size: auto 100%;
+	}
+	.skill{
+		width: calc((100% - 80px) / 2);
+	}
+	.skill__text{
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	.price__items{
+		flex-wrap: wrap;
+	}
+	.plan{
+		flex: 1px 0 auto;
+		/*width: calc((100% - 80px) / 2);*/
+		max-width: 50%;
+	}
+}
 
-
+@media (max-width: 1024px) {
+	.gallery__btns{
+		max-width: 646px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.portfolio__btn{
+	  margin-bottom: 5px;
+	}
+	.gallery__link{
+    max-width: 50%;
+    width: calc((100% - 50px) / 2);
+	}
+	.price__items{
+		 justify-content: space-evenly;
+	}
+	.plan{
+		flex: 0 0 auto;
+		width: calc((100% - 40px) / 2);
+		max-width: 50%;
+	}
+}
 
 @media (max-width: 768px) {
 	.container{
@@ -508,7 +555,7 @@ a:hover{
 	.rss{
 		padding-bottom: 21px;
 	}
-	.social{
+	.social, .rss, .github{
 		width: auto;
 	}
 	.social__items{
