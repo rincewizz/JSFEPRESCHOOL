@@ -426,7 +426,8 @@ a:hover{
 
 	.section__title{
 		font-size: 32px;
-    max-width: 56%;
+		width: 56%;
+    max-width: 364px;
 	}
 	.skills__list{
 		gap: 0;
@@ -465,5 +466,12 @@ a:hover{
 	.gallery__link{
 		max-width: 450px;
     width: 100%;
+	}
+
+	.player{
+		padding-bottom: 50.25%;
+	}
+	.container--video{
+		padding: 0
 	}
 }
