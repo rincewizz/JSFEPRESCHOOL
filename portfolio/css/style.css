@@ -474,4 +474,18 @@ a:hover{
 	.container--video{
 		padding: 0
 	}
+
+	.price__items{
+		justify-content: center;
+		gap: 0;
+	}
+	.plan{
+    max-width: 420px;
+    width: 100%;
+    margin-bottom: 49px;
+	}
+
+	.contacts{
+		margin-top: 56px
+	}
 }
