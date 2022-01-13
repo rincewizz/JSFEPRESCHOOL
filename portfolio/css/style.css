@@ -498,4 +498,23 @@ a:hover{
 		font-size: 32px;
 		text-align: center;
 	}
+
+	.footer{
+	  padding: 20px 0;
+	}
+	.footer__content{
+		flex-direction: column;
+	}
+	.rss{
+		padding-bottom: 21px;
+	}
+	.social{
+		width: auto;
+	}
+	.social__items{
+		padding: 0;
+	}
+	.social__item{
+		margin: 0 7px;
+	}
 }
