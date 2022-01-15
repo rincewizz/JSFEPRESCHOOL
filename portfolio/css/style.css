@@ -405,8 +405,6 @@ a:hover{
 		flex-wrap: wrap;
 	}
 	.plan{
-		flex: 1px 0 auto;
-		/*width: calc((100% - 80px) / 2);*/
 		max-width: 50%;
 	}
 }
@@ -445,6 +443,9 @@ a:hover{
 	}
 	.flex{
 		flex-wrap: wrap;
+	}
+	.menu{
+		display: none;
 	}
 	.section{
 		margin-top: 88px;
@@ -564,4 +565,57 @@ a:hover{
 	.social__item{
 		margin: 0 7px;
 	}
+}
+
+
+@media (max-width: 576px) {
+	.container{
+		padding: 0 20px;
+		max-width: 576px;
+		background-position: center;
+	}
+	.header{
+		height: auto;
+		max-height: none;
+	}
+	.section--hero{
+    margin: 0 auto;
+    padding: 40px 0;
+	}
+	.section__title{
+		width: 80%;
+	}
+
+	.skills__list{
+		margin: 53px 0 0 0;
+	}
+	.skill{
+    width: 100%;
+    margin: 0;
+	}
+
+	.player{
+		background-size: cover;
+	}
+
+
+}
+
+@media (max-width: 480px) {
+	.container--video{
+		padding: 0
+	}
+	.header{
+		background-position: center;
+	}
+	.section__title {
+	  width: 90%;
+	}
+	.plan{
+		padding: 20px
+	}
+	.contacts{
+		background-position: 30%;
+	}
+
 }
