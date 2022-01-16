@@ -1,4 +1,23 @@
 
+let burger = document.querySelector(".burger");
+let menu = document.querySelector(".menu");
+
+function showMenu(){
+	burger.classList.toggle("burger--active");
+	menu.classList.toggle("menu--show");
+	document.body.classList.toggle("body--menu-open");
+}
+function hideMenu(e){
+	if(e.target && e.target.classList.contains("menu__link")) {
+		showMenu();
+	}
+}
+
+
+burger.addEventListener("click", showMenu, false);
+menu.addEventListener("click", hideMenu, false);
+
+
 let selfcheck =`
 Score: 110/100
 ✅Вёрстка валидная +10

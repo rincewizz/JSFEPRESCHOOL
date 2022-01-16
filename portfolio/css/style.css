@@ -75,6 +75,29 @@ a:hover{
 .menu__link{
 	text-decoration: none;
 }
+.burger{
+	display: none;
+}
+.burger__line{
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #fff;
+	margin-bottom: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.burger__line:last-child{
+	margin-bottom: 0
+}
+.burger--active .burger__line:first-child{
+	transform: translateY(13px) rotate(45deg) scaleX(1.3);
+}
+.burger--active .burger__line:last-child{
+	transform: translateY(-13px) rotate(-45deg) scaleX(1.3);
+}
+.burger--active .burger__line:nth-child(2){
+	opacity: 0;
+}
 
 .lang{
 	font-size: 20px;
@@ -87,6 +110,10 @@ a:hover{
 }
 .lang__link{
 	text-decoration: none;
+	font-weight: bold;
+}
+.lang__link--active{
+	color: #BDAE82;
 }
 
 .hero__wrap{
@@ -433,19 +460,64 @@ a:hover{
 }
 
 @media (max-width: 768px) {
+	.body--menu-open{
+		overflow: hidden;
+	}
+	.body--menu-open:after{
+	  content: '';
+	  display: block;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  background: rgba(0, 0, 0, .5);
+	  z-index: 10;
+	}
 	.container{
 		max-width: 768px;
 		margin: 0 auto;
 		padding: 0 60px;
 		box-sizing: border-box;
-
 		overflow: hidden; /* DEL */
 	}
 	.flex{
 		flex-wrap: wrap;
 	}
 	.menu{
-		display: none;
+    position: fixed;
+    background: #000;
+    right: -100%;
+    top: 0;
+    width: 80.8%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 125px 0 0 112px;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	.menu--show{
+		right: 0;
+		overflow: auto;
+		z-index: 20;
+	}
+	.menu__list{
+		flex-direction: column;
+	}
+	.menu__item{
+		margin: 0;
+    font-size: 35px;
+    line-height: 89px;
+	}
+	.burger{
+		display: block;
+		background: none;
+		border: none;
+		margin-left: 12px;
+		position: relative;
+		z-index: 30;
+	}
+	.lang{
+		margin-left: auto;
 	}
 	.section{
 		margin-top: 88px;
@@ -577,6 +649,13 @@ a:hover{
 	.header{
 		height: auto;
 		max-height: none;
+	}
+	.menu{
+		padding: 125px 0 0;
+		width: 100%;
+	}
+	.menu__item{
+		margin: 0 auto;
 	}
 	.section--hero{
     margin: 0 auto;
