@@ -479,7 +479,7 @@ a:hover{
 		margin: 0 auto;
 		padding: 0 60px;
 		box-sizing: border-box;
-		overflow: hidden; /* DEL */
+
 	}
 	.flex{
 		flex-wrap: wrap;
@@ -527,7 +527,7 @@ a:hover{
 	}
 	.header{
 		height: 590px;
-	  background-size: auto 105%; /* ??? */
+	  background-size: auto 105%; 
 	  background-position: bottom left;
 	}
 	.hero__wrap{
