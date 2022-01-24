@@ -17,11 +17,13 @@ a:hover{
 }
 
 .container{
-	width: 1440px;
+	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 20px;
 	box-sizing: border-box;
 }
+
+
 .flex{
 	display: flex;
   flex-direction: row;
@@ -42,6 +44,7 @@ a:hover{
 .header{
 	background: url(../img/hero-bg.jpg) top center no-repeat;
 	height: 910px;
+	max-height: calc(100vw * 0.9);
 }
 
 .logo__img{
@@ -72,6 +75,29 @@ a:hover{
 .menu__link{
 	text-decoration: none;
 }
+.burger{
+	display: none;
+}
+.burger__line{
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #fff;
+	margin-bottom: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.burger__line:last-child{
+	margin-bottom: 0
+}
+.burger--active .burger__line:first-child{
+	transform: translateY(13px) rotate(45deg) scaleX(1.3);
+}
+.burger--active .burger__line:last-child{
+	transform: translateY(-13px) rotate(-45deg) scaleX(1.3);
+}
+.burger--active .burger__line:nth-child(2){
+	opacity: 0;
+}
 
 .lang{
 	font-size: 20px;
@@ -84,16 +110,21 @@ a:hover{
 }
 .lang__link{
 	text-decoration: none;
+	font-weight: bold;
+}
+.lang__link--active{
+	color: #BDAE82;
 }
 
 .hero__wrap{
 	max-width: 470px;
-	margin: 160px 40px;
+	margin: 160px 60px;
 }
 .hero__title{
 	font-family: 'Merriweather', serif;
 	font-size: 60px;
-	line-height: 120px;
+	font-weight: 700;
+	line-height: 2;
 	margin: 0;
 }
 .hero__text{
@@ -161,12 +192,14 @@ a:hover{
 }
 
 .skills__list{
+	flex-wrap: wrap;
 	margin-top: 62px;
 	gap: 40px;
 }
 .skill{
 	text-align: center;
-	flex: 1 0 0;;
+	flex: 1 0 auto;
+	width: calc((100% - 120px) / 4);
 }
 .skill__ico{
 	width: auto;
@@ -190,7 +223,7 @@ a:hover{
 
 .gallery__btns{
 	text-align: center;
-	margin-top: 60px;
+	margin-top: 60px;	
 }
 .gellery__photos{
 	gap: 25px;
@@ -200,6 +233,7 @@ a:hover{
 	display: block;
 	flex: 1 0 auto;
   max-width: 33.333%;
+  width: calc((100% - 50px) / 3);
 }
 .gallery__img{
 	width: 100%;
@@ -345,7 +379,7 @@ a:hover{
 }
 .github{
   line-height: 2;
-  width: 25%;
+  width: 35%;
 }
 .year{
   margin: 0 20px;
@@ -357,7 +391,7 @@ a:hover{
 	text-decoration: none;
 }
 .social{
-  width: 25%;
+  width: 35%;
   text-align: right;
 }
 .social__items{
@@ -379,4 +413,288 @@ a:hover{
 }
 .social__svg:hover{
 	fill: #CCBA8D;
+}
+
+@media (max-width: 1440px) {
+	.header{
+		background-position: bottom left;
+    background-size: auto 100%;
+	}
+	.skill{
+		width: calc((100% - 80px) / 2);
+	}
+	.skill__text{
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	.price__items{
+		flex-wrap: wrap;
+	}
+	.plan{
+		max-width: 50%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.gallery__btns{
+		max-width: 646px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.portfolio__btn{
+	  margin-bottom: 5px;
+	}
+	.gallery__link{
+    max-width: 50%;
+    width: calc((100% - 50px) / 2);
+	}
+	.price__items{
+		 justify-content: space-evenly;
+	}
+	.plan{
+		flex: 0 0 auto;
+		width: calc((100% - 40px) / 2);
+		max-width: 50%;
+	}
+}
+
+@media (max-width: 768px) {
+	.body--menu-open{
+		overflow: hidden;
+	}
+	.body--menu-open:after{
+	  content: '';
+	  display: block;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  background: rgba(0, 0, 0, .5);
+	  z-index: 10;
+	}
+	.container{
+		max-width: 768px;
+		margin: 0 auto;
+		padding: 0 60px;
+		box-sizing: border-box;
+
+	}
+	.flex{
+		flex-wrap: wrap;
+	}
+	.menu{
+    position: fixed;
+    background: #000;
+    right: -100%;
+    top: 0;
+    width: 80.8%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 125px 0 0 112px;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	.menu--show{
+		right: 0;
+		overflow: auto;
+		z-index: 20;
+	}
+	.menu__list{
+		flex-direction: column;
+	}
+	.menu__item{
+		margin: 0;
+    font-size: 35px;
+    line-height: 89px;
+	}
+	.burger{
+		display: block;
+		background: none;
+		border: none;
+		margin-left: 12px;
+		position: relative;
+		z-index: 30;
+	}
+	.lang{
+		margin-left: auto;
+	}
+	.section{
+		margin-top: 88px;
+	}
+	.section--hero{
+		margin-top: 80px
+	}
+	.header{
+		height: 590px;
+	  background-size: auto 105%; 
+	  background-position: bottom left;
+	}
+	.hero__wrap{
+		margin: 0;
+		max-width: 420px;
+	}
+	.hero__title{
+		font-size: 32px;
+		line-height: 2;
+		font-weight: 400;
+	}
+	.hero__text{
+		line-height: 1.2;
+    margin: 18px 0 60px;
+	}
+
+	.section__title{
+		font-size: 32px;
+		width: 56%;
+    max-width: 364px;
+	}
+	.skills__list{
+		gap: 0;
+		margin-top: 53px;
+    margin-left: -20px;
+    margin-right: -20px;
+	}
+	.skill{
+    flex: 1 0 auto;
+    width: 50%;
+    padding-bottom: 65px;
+	}
+	.skill__ico{
+		margin-bottom: 30px;
+	}
+	.skill__title{
+		letter-spacing: initial;
+	}
+	.skill__text{
+    line-height: 1.3;
+    margin-bottom: 10px;
+    margin-top: 20px;
+	}
+
+	.gallery__btns{
+		margin-top: 58px;
+	}
+	.portfolio__btn{
+		 margin-bottom: 5px;
+	}
+
+	.gellery__photos{
+		 margin-top: 55px;
+		 justify-content: center;
+	}
+	.gallery__link{
+		max-width: 450px;
+    width: 100%;
+	}
+
+	.player{
+		padding-bottom: 50.25%;
+	}
+	.container--video{
+		padding: 0
+	}
+
+	.price__items{
+		justify-content: center;
+		gap: 0;
+	}
+	.plan{
+    max-width: 420px;
+    width: 100%;
+    margin-bottom: 49px;
+	}
+
+	.contacts{
+		margin-top: 30px;
+    background-size: auto 100%;
+	}
+	.contacts__wrap{
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 113px;
+	}
+	.contacts__title{
+		font-size: 32px;
+		text-align: center;
+	}
+
+	.footer{
+	  padding: 20px 0;
+	}
+	.footer__content{
+		flex-direction: column;
+	}
+	.rss{
+		padding-bottom: 21px;
+	}
+	.social, .rss, .github{
+		width: auto;
+	}
+	.social__items{
+		padding: 0;
+	}
+	.social__item{
+		margin: 0 7px;
+	}
+}
+
+
+@media (max-width: 576px) {
+	.container{
+		padding: 0 20px;
+		max-width: 576px;
+		background-position: center;
+	}
+	.header{
+		height: auto;
+		max-height: none;
+	}
+	.menu{
+		padding: 125px 0 0;
+		width: 100%;
+	}
+	.menu__item{
+		margin: 0 auto;
+	}
+	.section--hero{
+    margin: 0 auto;
+    padding: 40px 0;
+	}
+	.section__title{
+		width: 80%;
+	}
+
+	.skills__list{
+		margin: 53px 0 0 0;
+	}
+	.skill{
+    width: 100%;
+    margin: 0;
+	}
+
+	.player{
+		background-size: cover;
+	}
+
+
+}
+
+@media (max-width: 480px) {
+	.container--video{
+		padding: 0
+	}
+	.header{
+		background-position: center;
+	}
+	.section__title {
+	  width: 90%;
+	}
+	.plan{
+		padding: 20px
+	}
+	.contacts{
+		background-position: 30%;
+	}
+
 }
