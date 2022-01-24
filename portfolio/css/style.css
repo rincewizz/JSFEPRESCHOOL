@@ -590,6 +590,12 @@ a:hover{
 
 	.player{
 		padding-bottom: 50.25%;
+    background-size: 820px auto;
+    background-position: left;
+	}
+	.play-btn__img{
+		width: 66px;
+		height: auto;
 	}
 	.container--video{
 		padding: 0
