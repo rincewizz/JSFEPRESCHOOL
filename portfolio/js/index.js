@@ -43,6 +43,21 @@ function showGallery({path="./gallery/", category, imgs=["1.jpg","2.jpg","3.jpg"
 }
 
 
+let langEn = document.querySelector(".lang__link--en");
+let langRu = document.querySelector(".lang__link--ru");
+
+langEn.addEventListener("click", (e)=> { e.preventDefault(); translate("en"); } );
+langRu.addEventListener("click", (e)=> { e.preventDefault(); translate("ru"); } );
+
+function translate(lang){
+    for( [key,val] of Object.entries(i18Obj[lang]) ){
+        document.querySelectorAll(`*[data-i18n="${key}"]`).forEach( el => el.innerText=val);
+    }
+    langEn.classList.toggle("lang__link--active");
+    langRu.classList.toggle("lang__link--active");
+    
+}
+
 
 /*
 let selfcheck =`
