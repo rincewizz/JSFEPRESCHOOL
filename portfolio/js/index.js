@@ -1,4 +1,16 @@
 
+document.addEventListener("DOMContentLoaded", () => {
+    let theme = localStorage.getItem('theme');
+    let lang = localStorage.getItem('lang');
+
+    if(theme && theme=="light"){
+        switchTheme();
+    }
+    if(lang){
+       translate(lang);
+    }
+});
+
 let burger = document.querySelector(".burger");
 let menu = document.querySelector(".menu");
 
@@ -13,7 +25,6 @@ function hideMenu(e){
     }
 }
 
-
 burger.addEventListener("click", showMenu, false);
 menu.addEventListener("click", hideMenu, false);
 
@@ -22,11 +33,6 @@ let btnWinter = document.querySelector(".button--winter");
 let btnSpring = document.querySelector(".button--spring");
 let btnSummer = document.querySelector(".button--summer");
 let btnAutumn = document.querySelector(".button--autumn");
-
-btnWinter.addEventListener("click", (e)=> showGallery({category:"winter", btn:e.target}) );
-btnSpring.addEventListener("click", (e)=> showGallery({category:"spring", btn:e.target}) );
-btnSummer.addEventListener("click", (e)=> showGallery({category:"summer", btn:e.target}) );
-btnAutumn.addEventListener("click", (e)=> showGallery({category:"autumn", btn:e.target}) );
 
 function showGallery({path="./gallery/", category, imgs=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"], btn=null}){
     
@@ -42,12 +48,15 @@ function showGallery({path="./gallery/", category, imgs=["1.jpg","2.jpg","3.jpg"
     }
 }
 
+btnWinter.addEventListener("click", (e)=> showGallery({category:"winter", btn:e.target}) );
+btnSpring.addEventListener("click", (e)=> showGallery({category:"spring", btn:e.target}) );
+btnSummer.addEventListener("click", (e)=> showGallery({category:"summer", btn:e.target}) );
+btnAutumn.addEventListener("click", (e)=> showGallery({category:"autumn", btn:e.target}) );
+
+
 
 let langEn = document.querySelector(".lang__link--en");
 let langRu = document.querySelector(".lang__link--ru");
-
-langEn.addEventListener("click", (e)=> { e.preventDefault(); translate("en"); } );
-langRu.addEventListener("click", (e)=> { e.preventDefault(); translate("ru"); } );
 
 function translate(lang){
     for( [key,val] of Object.entries(i18Obj[lang]) ){
@@ -55,8 +64,12 @@ function translate(lang){
     }
     langEn.classList.toggle("lang__link--active");
     langRu.classList.toggle("lang__link--active");
-    
+
+    localStorage.setItem('lang', lang);
 }
+
+langEn.addEventListener("click", (e)=> { e.preventDefault(); translate("en"); } );
+langRu.addEventListener("click", (e)=> { e.preventDefault(); translate("ru"); } );
 
 
 let themeBtn = document.querySelector(".theme-toggle");
@@ -64,9 +77,34 @@ themeBtn.addEventListener("click", switchTheme );
 
 function switchTheme(){
     document.body.classList.toggle("body--white");
+    let isWhite = document.body.classList.contains("body--white");
+    localStorage.setItem('theme', isWhite ? "light" : "dark");
 }
 
 
+let btnsRipple = document.querySelectorAll('.button--ripple');
+
+btnsRipple.forEach( el => { el.addEventListener('click', function (e) {
+        const x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+        const y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+
+        const btnTop = e.target.offsetTop;
+        const btnLeft = e.target.offsetLeft;
+
+        const xInside = x - btnLeft;
+        const yInside = y - btnTop;
+
+        const circle = document.createElement('span');
+        circle.classList.add('button__circle');
+        circle.style.top = yInside + 'px';
+        circle.style.left = xInside + 'px';
+
+        this.appendChild(circle);
+
+        setTimeout(() => circle.remove(), 500);
+    });
+
+});
 
 /*
 let selfcheck =`
