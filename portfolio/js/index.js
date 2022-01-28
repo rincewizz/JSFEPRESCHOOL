@@ -59,6 +59,15 @@ function translate(lang){
 }
 
 
+let themeBtn = document.querySelector(".theme-toggle");
+themeBtn.addEventListener("click", switchTheme );
+
+function switchTheme(){
+    document.body.classList.toggle("body--white");
+}
+
+
+
 /*
 let selfcheck =`
 Score: 85/75

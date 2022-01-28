@@ -42,7 +42,8 @@ a:hover{
 }
 
 .header{
-	background: url(../img/hero-bg.jpg) top center no-repeat;
+	background: #000 url(../img/hero-bg.jpg) top center no-repeat;
+	color: #fff;
 	height: 910px;
 	max-height: calc(100vw * 0.9);
 }
@@ -75,6 +76,28 @@ a:hover{
 .menu__link{
 	text-decoration: none;
 }
+.theme-toggle{
+	background: transparent;
+	border: none;
+  height: 45px;
+  width: 45px;
+  padding: 0;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.toggle__img{
+	fill: #fff;
+}
+.toggle__img--light{
+	display: block;
+}
+.toggle__img--dark{
+	display: none;
+}
+.theme-toggle:hover .toggle__img{
+	fill: #BDAE82;
+}
+
 .burger{
 	display: none;
 }
@@ -97,6 +120,9 @@ a:hover{
 }
 .burger--active .burger__line:nth-child(2){
 	opacity: 0;
+}
+.burger:hover .burger__line{
+	background: #BDAE82;
 }
 
 .lang{
@@ -146,7 +172,7 @@ a:hover{
 	min-width: 220px;
 	box-sizing: border-box;
 	cursor: pointer;
-	transition: color 0.5s;
+	transition: color 0.5s, background 0.5s;
 }
 .button:hover{
 	color: #fff;
@@ -322,7 +348,8 @@ a:hover{
 }
 
 .contacts{
-	background: url(../img/contacts.jpg) center no-repeat;
+	background: #000 url(../img/contacts.jpg) center no-repeat;
+	color: #fff;
 }
 .contacts__wrap{
 	max-width: 450px;
@@ -371,6 +398,8 @@ a:hover{
 }
 
 .footer{
+	background: #000;
+	color: #fff;
   font-size: 20px;
   padding: 55px 0;
 }
@@ -413,6 +442,46 @@ a:hover{
 }
 .social__svg:hover{
 	fill: #CCBA8D;
+}
+
+.body--white{
+	background: #fff;
+	color: #000;
+}
+.body--white .toggle__img--light{
+	display: none;
+}
+.body--white .toggle__img--dark{
+	display: block;
+}
+.body--white .burger--active .burger__line{
+	background: #1C1C1C;
+}
+.body--white .section__title{
+	color: #000;
+}
+.body--white .section__title:after, 
+.body--white .section__title:before {
+    background: #000;
+}
+.body--white .button--border{
+	color:  #000;
+}
+.body--white .button--border:hover{
+	background: #BDAE82;
+	color:  #fff;
+}
+.body--white .plan__title,
+.body--white .plan__services{
+	color:  #000;
+}
+@media (max-width: 768px){
+	.body--white .menu {
+	    background: #fff;
+	}
+	.body--white .menu a{
+	    color: #000;
+	}
 }
 
 @media (max-width: 1440px) {
@@ -579,7 +648,7 @@ a:hover{
 		 margin-bottom: 5px;
 	}
 
-	.gellery__photos{
+	.gallery__photos{
 		 margin-top: 55px;
 		 justify-content: center;
 	}
