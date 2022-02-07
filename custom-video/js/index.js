@@ -64,11 +64,12 @@ video.addEventListener('loadeddata', function() {
 
 });
 
-player.addEventListener('mousemove', hideControls);
+player.addEventListener('pointermove', hideControls);
 
-volume.addEventListener('mousedown', function(event){
+volume.addEventListener('pointerdown', function(event){
 
   event.preventDefault(); // предотвратить запуск выделения (действие браузера по умолчанию) 
+  if(event.which != 1) return
 
   let changeEvent = new CustomEvent("change", {
     detail: { volume: 100 }
@@ -93,7 +94,7 @@ volume.addEventListener('mousedown', function(event){
 
     changeEvent.detail.volume = valuePercent;
     volume.dispatchEvent(changeEvent);
-    console.log(valuePercent);
+    // console.log(valuePercent);
   }
 
   
@@ -107,23 +108,22 @@ volume.addEventListener('mousedown', function(event){
 
   }
 
-  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('pointermove', onMouseMove);
 
-  document.addEventListener('mouseup', function(event){
+  document.addEventListener('pointerup', function(event){
 
-    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('pointermove', onMouseMove);
 
   }, {once : true});
-
 
 
 } );
 
 
-
-progress.addEventListener('mousedown', function(event){
-
+progress.addEventListener('pointerdown', function(event){
   event.preventDefault(); // предотвратить запуск выделения (действие браузера по умолчанию) 
+
+  if(event.which != 1) return
 
   let changeEvent = new CustomEvent("change", {
     detail: { currentTime: 0 }
@@ -145,11 +145,10 @@ progress.addEventListener('mousedown', function(event){
     currentValue.style.width = pos+"px";
 
     let valuePercent = getPosition() /(fullWidth*0.01);
-
     // video.duration
     changeEvent.detail.currentTime = valuePercent;
     progress.dispatchEvent(changeEvent);
-    console.log(valuePercent);
+    // console.log(valuePercent);
   }
 
   
@@ -163,19 +162,17 @@ progress.addEventListener('mousedown', function(event){
 
   }
 
-  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('pointermove', onMouseMove);
 
-  document.addEventListener('mouseup', function(event){
+  document.addEventListener('pointerup', function(event){
 
-    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('pointermove', onMouseMove);
 
   }, {once : true});
 
 
 
 } );
-
-
 
 play.addEventListener('click', playPauseMedia);
 bigPlay.addEventListener('click', playPauseMedia);
@@ -197,7 +194,6 @@ function playPauseMedia() {
 
 video.addEventListener('timeupdate', (event) => {
   // console.log(video.currentTime);
-
   currentTime.innerText=getFormattedTime(video.currentTime);
   remainingTime.innerText=getFormattedTime(Math.ceil(video.duration-video.currentTime));
 
@@ -211,11 +207,17 @@ video.addEventListener('timeupdate', (event) => {
 
 
 sound.addEventListener('click', function(e) {
-  video.muted = !video.muted;
+  // video.muted = !video.muted;
+  let currentVolume = volume.querySelector(".controls__current-volume");
   if(video.muted){
-    sound.classList.add("controls__sound--mute");    
+    video.muted = false;
+    sound.classList.remove("controls__sound--mute"); 
+    currentVolume.style.width = video.volume * volume.getBoundingClientRect().width +"px";      
   }else{
-    sound.classList.remove("controls__sound--mute");      
+    video.muted = true;
+    sound.classList.add("controls__sound--mute");
+    currentVolume.style.width = 0;
+         
   }
 });
 
@@ -240,8 +242,7 @@ volume.addEventListener("change", function(event) {
   video.volume=event.detail.volume/100;
   if(video.volume>0){
     video.muted=false;
-    sound.classList.remove("controls__sound--mute");
-    
+    sound.classList.remove("controls__sound--mute");    
   }else{
     video.muted=true;
     sound.classList.add("controls__sound--mute");
